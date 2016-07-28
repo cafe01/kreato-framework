@@ -1,0 +1,6 @@
+name = "Kreato"
+# badges = ["travis"]
+authority="cpan:CAFEGRATZ"
+
+module_maker="ModuleBuildTiny"
+

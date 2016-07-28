@@ -1,0 +1,442 @@
+$kreato-yellow: #ffe500;
+$kreato-blue: #1294dd;
+
+//GENERAL
+html, body {
+    height: 100%;
+    color: #222427;
+}
+#full-container {
+    position: relative;
+}
+.section {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+.section.first {
+    padding-top: 30px;
+}
+.grey-bg {
+    background-color: #f4f6fa;
+}
+.button-collapse {
+    color: $kreato-blue;
+}
+.btn-large {
+    background-color: white;
+    border: 1px solid lighten($kreato-blue, 25%);
+    color: $kreato-blue;
+    font-weight: 500;
+    font-size: 13px;
+    transition-duration: 0.13s;
+    width: 240px;
+    margin: 10px;
+    &:hover {
+        background-color: white;
+    }
+}
+.btn-large.btn-large-2 {
+    background-color: $kreato-blue;
+    color: white;
+    border-color: $kreato-blue;
+    &:hover {
+        background-color: lighten($kreato-blue, 15%);
+        border-color: lighten($kreato-blue, 15%);
+    }
+}
+.no-pad-top {padding-top: 0 !important;}
+.no-pad-bot {padding-bottom: 0 !important;}
+.no-margin-top {margin-top: 0 !important;}
+.no-margin-bot {margin-bottom: 0 !important;}
+
+
+//TYPOGRAPHY
+h1,h2,h3,h4,p {
+    font-family: 'Roboto', sans-serif;
+}
+.super-title, .super-title span {
+    font-size: 32px;
+}
+.super-title {
+    font-weight: 200;
+    font-size: 2.2rem;
+
+    span {
+        font-weight: 300;
+    }
+}
+h1.lead-title {
+    font-size: 30.5px;
+    font-weight: 300;
+}
+h2.subtitle {
+    font-size: 26px;
+    font-weight: 500;
+}
+h2.subtitle.padded {
+    padding-left: 15px;
+    border-left: 4px solid rgb(211,211,211);
+}
+p.big-text, p.small-text {
+    color: rgba(0,0,0,0.85);
+    font-size: 17.5px;
+    font-weight: 300;
+}
+p.big-text.bold {
+    font-weight: 400;
+}
+p.big-text.bigger {
+    font-size: 21.5px;
+}
+p.big-text.constrained {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+p.small-text {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+
+//HEADER
+nav {
+    background-color: rgba(255,255,255,0.95);
+    .nav-wrapper {
+        margin-left: 30px;
+        margin-right: 15px;
+    }
+    a:hover {
+        outline: none;
+    }
+    .button-collapse i {
+        font-size: 2rem;
+    }
+}
+.brand-logo img {
+    height: 39px;
+    vertical-align: middle;
+}
+#nav-mobile, .nav-wrapper ul li {
+    a {
+        text-transform: uppercase;
+        font-size: 13px;
+        font-weight: 500;
+        color: #444;
+    }
+    .submenu a {
+        padding-left: 45px;
+        font-weight: 300;
+    }
+}
+#nav-desktop {
+    li a {
+        transition: color .3s;
+        &:hover {
+            background-color: transparent;
+            color: $kreato-blue;
+        }
+    }
+    .active {
+        background-color: white;
+        background-color: transparent !important;
+        a {
+            color: $kreato-blue !important;
+        }
+    }
+}
+#nav-desktop .active a {color: $kreato-blue;}
+#nav-mobile .active a {background-color: rgba(0,0,0,0.05);}
+
+
+//INDEX
+#landing-home {
+    border-bottom: 1px solid #e0e0e0;
+}
+#porque-kreato {
+    .container {
+        max-width: 1140px;
+    }
+}
+.card {
+    .card-title {
+        line-height: 35px !important;
+        padding-bottom: 10px;
+        display: block;
+        font-size: 1.6rem;
+    }
+
+    .card-action a {
+        color: $kreato-blue !important;
+        letter-spacing: 1px;
+        font-weight: 500;
+        font-size: 12px;
+        transition: padding-left .2s linear !important;
+
+        &:hover {
+            color: lighten($kreato-blue, 20%) !important;
+            padding-left: 3px;
+        }
+    }
+}
+#como-trabalhamos {
+    background: url('../images/hook-bg-6.jpg') center center;
+    background-size: cover;
+    .icon-box-wrapper {
+        padding-bottom: 30px;
+    }
+    i, p {
+        color: white;
+    }
+    i {
+        font-size: 130px;
+    }
+    p {
+        opacity: 0.6;
+        font-size: 16px;
+    }
+}
+#testimonials {
+    height: 450px;
+    .rslides {
+        position: relative;
+        list-style: none;
+        overflow: hidden;
+        width: 100%;
+        margin: 0;
+    }
+    .rslides li {
+        -webkit-backface-visibility: hidden;
+        position: absolute;
+        display: none;
+        width: 100%;
+        left: 0;
+        top: 0;
+    }
+    .rslides li:first-child {
+        position: relative;
+        display: block;
+        float: left;
+    }
+    .rslides .author-quote {
+        line-height: 30px;
+        font-size: 16px;
+        font-style: italic;
+        margin: 0;
+        color: #5a5a5a;
+        margin-bottom: 30px;
+    }
+    .rslides .author-profile {
+        img {
+            border-radius: 99px;
+            border: 1px solid white;
+        }
+        .name {
+            text-transform: uppercase;
+            font-weight: 500;
+            font-size: 13px;
+            padding: 10px 0px 5px 0px;
+        }
+        .company {
+            color: #999;
+            font-style: italic;
+            font-size: 14px;
+        }
+    }
+}
+.table-of-contents {
+    position: fixed;
+    right: 30px;
+    padding: 20px 0;
+    a:hover, a.active {
+        border-left: 1px solid $kreato-blue !important;
+    }
+}
+#introducao {
+    .laptop-img {
+        width: 100%;
+        max-width: 800px;
+    }
+}
+#recursos {
+    .container {
+        max-width: 1100px;
+    }
+    img {
+        width: 100%;
+        max-width: 200px;
+    }
+    .recursos-item {
+        margin-bottom: 60px;
+        .right-aligned {
+            text-align: right;
+        }
+    }
+}
+#hospedagem {
+    background: url('../images/cloud-bg.jpg') center center;
+    background-size: cover;
+    i {font-size: 130px;}
+    i.icon-amazon {color: #ecb731;}
+    i.icon-branch {color: #2ad2c9;}
+    i.icon-servers {color: #004b79;}
+    i.icon-bandwidth {color: #ef5734;}
+    i.icon-backup-vault {color: #59626a;}
+}
+#contato {
+    .coffee-image {
+        width: 100%;
+        max-width: 525px;
+    }
+    .contact-form {
+        margin-bottom: 60px;
+        .input-field input[type=text]:focus + label {
+            color: $kreato-blue;
+        }
+        input, textarea {
+            &:focus {
+                border-bottom: 1px solid $kreato-blue;
+                box-shadow: 0 1px 0 0 $kreato-blue;
+            }
+        }
+        button {
+            margin: 0;
+        }
+
+        .error_message {
+            color: darken(red, 20%);
+        }
+    }
+}
+
+
+
+//FOOTER
+footer.page-footer {
+    margin-top: 0;
+    background: url('../images/blue-bg.jpg') no-repeat center center;
+    background-size: cover;
+    padding-top: 30px;
+    .container {
+        padding-bottom: 30px;
+    }
+    .footer-copyright {
+        font-size: 0.8em;
+        background-color: rgba(51, 51, 51, 0.30);
+        font-weight: 400;
+    }
+    i {
+        font-size: 16px;
+    }
+    a {
+        color: rgba(255,255,255,0.7);
+        transition: color .3s;
+        &:hover {
+            color: white;
+        }
+    }
+    h5 {
+        text-transform: uppercase;
+        font-size: 18px;
+        font-weight: 500;
+    }
+}
+
+
+
+//MEDIA QUERIES
+@media #{$small-and-down} {
+    .brand-logo img {
+        height: 36px;
+    }
+}
+@media #{$medium-and-down} {
+    .parallax-container .section {
+        position: absolute;
+        top: 40%;
+    }
+    nav .nav-wrapper {
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+}
+@media #{$medium-and-up} {
+    .super-title, .super-title span {
+        font-size: 40px;
+    }
+    .super-title span {
+        font-weight: 400;
+    }
+    .section {
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+    h1.lead-title {
+        font-size: 38px;
+        margin-bottom: 40px;
+    }
+    #landing-home {
+        background: #fff url('../images/developer.png') no-repeat center bottom;
+        position: relative;
+        padding-bottom: 0;
+        height: 875px;
+    }
+}
+@media #{$large-and-up} {
+    .section.first {
+        padding-top: 60px;
+    }
+    .super-title, .super-title span {
+        font-size: 50px;
+        line-height: 58px;
+    }
+    #how-it-works {
+        .icon-box-wrapper {
+            padding-bottom: 0;
+        }
+    }
+    #testimonials {
+        transition-duration: 0.5s;
+        .container {
+            width: 50%;
+        }
+        .rslides .author-quote {
+            font-size: 22px;
+            font-weight: 200;
+            color: black;
+        }
+    }
+    #recursos {
+        img {
+            max-width: 340px;
+        }
+    }
+    #contato {
+        .contact-form {
+            margin-bottom: 0;
+        }
+    }
+}
+@media only screen and (min-width : 993px) and (max-width: 1200px) {
+    #landing-home {
+        .container {
+            width: 80%;
+        }
+    }
+}
+@media only screen and (min-width : 1201px) {
+    #landing-home {
+        .container {
+            width: 70%;
+            .intro-description {
+                width: 70%;
+                margin-left: auto !important;
+                margin-right: auto !important;
+            }
+        }
+    }
+    #recursos {
+        .large-left {text-align: left;}
+        .large-right {text-align: right;}
+    }
+}

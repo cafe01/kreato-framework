@@ -1,0 +1,34 @@
+<section>
+
+    <div data-render="message"></div>
+
+    <h1>System Configuration</h1>
+
+    <form action="/save_config" method="post" data-render="[config]">
+    <div data-render="db_username" ></div>
+        <div>
+            <label for="db_dsn">db_dsn</label>
+            <input name="db_dsn" type="text" data-render="db_dsn@value" />
+        </div>
+
+        <div>
+            <label for="db_username">db_username</label>
+            <input name="db_username" type="text"  data-render="db_username@value" />
+        </div>
+
+        <div>
+            <label for="db_password">db_password</label>
+            <input name="db_password" type="text" data-render="db_password@value" />
+        </div>
+
+        <div>
+            <label for="db_options">db_options</label>
+            <input name="db_options" type="text" data-render="db_options@value" />
+        </div>
+
+        <input type="submit" value="Save">
+    </form>
+
+    <x-link to="/database">Setup Database</x-link>
+
+</section>

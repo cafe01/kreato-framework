@@ -1,0 +1,31 @@
+<section>
+
+    <div data-render="message"></div>
+
+    <h1>Database Installation</h1>
+
+    <form action="/database_install" method="post" data-render="[config]">
+
+        <fieldset>
+            <legend>Administator Account</legend>
+
+            <label>Full Name</label>
+            <input name="name" type="text" />
+
+            <label>Username</label>
+            <input name="username" type="text" />
+
+            <label>Password</label>
+            <input name="pw1" type="password"/>
+
+            <label>Password (repeat)</label>
+            <input name="pw2" type="password"/>
+        </fieldset>
+
+
+        <input type="submit" value="Save">
+    </form>
+
+    <x-link to="/finish">Finish</x-link>
+
+</section>
